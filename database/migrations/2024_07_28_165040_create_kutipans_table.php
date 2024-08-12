@@ -19,7 +19,7 @@ return new class extends Migration {
             $table->string('jabatan_lama');
             $table->string('jabatan_baru');
             $table->string('keterangan');
-            $table->string('status');
+            $table->string('status')->nullable();
             $table->string('file_kutipan');
             $table->softDeletes();
             $table->timestamps();

@@ -6,11 +6,11 @@
     $classes = $isActive
         ? 'nav-link active text-gray-100 bg-[linear-gradient(135deg,var(--tw-gradient-stops))] from-violet-500/[0.24] to-violet-500/[0.04]'
         : 'nav-link text-gray-500 hover:text-white';
-    $iconClasses = $isActive ? 'shrink-0 fill-current text-violet-500' : 'shrink-0 fill-current text-gray-500';
+    $iconClasses = $isActive ? 'shrink-0 fill-current text-white' : 'shrink-0 fill-current text-gray-500';
 @endphp
 
 <li
-    class="nav-item pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0 {{ $isActive ? 'bg-[linear-gradient(135deg,var(--tw-gradient-stops))] from-violet-500/[0.24] to-violet-500/[0.04]' : '' }}">
+    class="nav-item pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0 {{ $isActive ? 'from-amber-500 to-transparent bg-gradient-to-r ' : '' }}">
     <a wire:navigate {{ $attributes->merge(['class' => $classes]) }}>
         <div class="flex items-center">
             <svg class="{{ $iconClasses }}" xmlns="http://www.w3.org/2000/svg" width="16" height="16"

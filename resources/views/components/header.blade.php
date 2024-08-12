@@ -19,11 +19,10 @@
                 </button>
 
             </div>
-
             <!-- Header: Right side -->
             <div class="flex items-center space-x-3">
 
-
+                <div class="loading" wire:loading></div>
                 <!-- Dark mode toggle -->
                 <x-theme-toggle />
 

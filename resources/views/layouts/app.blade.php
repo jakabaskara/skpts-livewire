@@ -8,6 +8,14 @@
     @vite(['resources/js/app.js', 'resources/css/app.css'])
     @livewireStyles
     @filamentStyles
+    <link rel="stylesheet" href="{{ asset('css/loading.css') }}">
+    <style>
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
     <script>
         if (localStorage.getItem('dark-mode') === 'false' || !('dark-mode' in localStorage)) {
@@ -20,7 +28,7 @@
     </script>
 </head>
 
-<body class="font-inter antialiased bg-gray-900 text-gray-400" :class="{ 'sidebar-expanded': sidebarExpanded }"
+<body class="font-inter antialiased bg-black text-gray-400" :class="{ 'sidebar-expanded': sidebarExpanded }"
     x-data="{ sidebarOpen: false, sidebarExpanded: localStorage.getItem('sidebar-expanded') == 'true' }" x-init="$watch('sidebarExpanded', value => localStorage.setItem('sidebar-expanded', value))">
 
     <script>
@@ -52,6 +60,16 @@
 
     @livewireScripts
     @filamentScripts
+
+    <script>
+        $('.btn-load').on('click', function() {
+            if ($(this).find('.loading-spinner').length === 0) {
+                $(this).prepend('<span class="loading loading-spinner"></span>');
+            }
+
+        })
+    </script>
+    @stack('js')
 </body>
 
 </html>

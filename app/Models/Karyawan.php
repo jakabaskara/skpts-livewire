@@ -8,16 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Skpts extends Model
+class Karyawan extends Model
 {
-    use HasFactory, HasUuids, SoftDeletes;
-    protected $table = 'skpts';
-    protected $guarded = [
-        "id",
-    ];
-
+    use HasFactory, SoftDeletes, HasUuids;
+    protected $table = 'karyawan';
+    protected $guarded = ['id'];
     public function kutipan(): HasMany
     {
-        return $this->hasMany(Kutipan::class);
+        return $this->hasMany(Kutipan::class, 'nik_sap');
     }
 }

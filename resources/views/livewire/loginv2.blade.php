@@ -13,7 +13,7 @@
                             {{ $this->form }}
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary w-full text-white">Sign
+                    <button type="submit" class="btn border-none hover:bg-amber-600 bg-amber-500 w-full text-white">Sign
                         in</button>
                     <p class="text-sm font-light text-gray-500 dark:text-gray-400 text-center">
                         Versi 1.0

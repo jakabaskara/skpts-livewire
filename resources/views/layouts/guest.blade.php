@@ -12,7 +12,7 @@
 <body>
 
     <main>
-        <div class="bg-dark">
+        <div class="">
             {{ $slot }}
         </div>
     </main>

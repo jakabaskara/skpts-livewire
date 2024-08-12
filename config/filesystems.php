@@ -36,6 +36,18 @@ return [
             'throw' => false,
         ],
 
+        'local-skpts' => [
+            'driver' => 'local',
+            'root' => storage_path('app/skpts'),
+            'throw' => false,
+        ],
+
+        'local-kutipan' => [
+            'driver' => 'local',
+            'root' => storage_path('app/kutipan'),
+            'throw' => false,
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),

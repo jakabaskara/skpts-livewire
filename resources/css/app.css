@@ -1,6 +1,6 @@
+/* @import 'daisyui'; */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* DaisyUI themes and components */
-@import 'daisyui';
